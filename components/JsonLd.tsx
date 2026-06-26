@@ -22,8 +22,8 @@ const eventVenueSchema = {
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 52.3833,
-    longitude: 13.6833,
+    latitude: 52.379462,
+    longitude: 13.648771,
   },
   areaServed: {
     '@type': 'City',
@@ -31,7 +31,7 @@ const eventVenueSchema = {
   },
   sameAs: [
     'https://instagram.com/shared.horizon',
-    'GOOGLE_BUSINESS_PROFILE_URL',
+    'https://www.google.com/maps/place/Hausboot+Shared+Horizon/@52.379462,13.6461961,17z/data=!4m9!3m8!1s0x47a839e454e49797:0xba13ddd1b221b178!5m2!4m1!1i2!8m2!3d52.379462!4d13.648771!16s%2Fg%2F11npvkx3md',
   ],
   openingHoursSpecification: {
     '@type': 'OpeningHoursSpecification',
@@ -66,7 +66,7 @@ const organizationSchema = {
   },
   sameAs: [
     'https://instagram.com/shared.horizon',
-    'GOOGLE_BUSINESS_PROFILE_URL',
+    'https://www.google.com/maps/place/Hausboot+Shared+Horizon/@52.379462,13.6461961,17z/data=!4m9!3m8!1s0x47a839e454e49797:0xba13ddd1b221b178!5m2!4m1!1i2!8m2!3d52.379462!4d13.648771!16s%2Fg%2F11npvkx3md',
   ],
 };
 
