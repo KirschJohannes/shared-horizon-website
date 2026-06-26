@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   verification: {
-    google: 'GOOGLE_SITE_VERIFICATION_TOKEN',
+    google: 'oZryc-Hn6ZAMHCrzdswSb09KdQ0H4K9QEZfLWmR9tWo',
   },
   openGraph: {
     title: 'Eventlocation am Wasser Berlin | Shared Horizon',
