@@ -36,6 +36,7 @@ export interface GalleryItem {
   h: number;
   cap: string;
   src: string;
+  alt?: string;
 }
 
 export interface GalCat {

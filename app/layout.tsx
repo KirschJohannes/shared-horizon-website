@@ -2,17 +2,37 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Shared Horizon — Hausboot in Berlin für Events & Offsites',
-  description: 'Über 170 m² Hausboot in Berlin Schmöckwitz. Für Business-Offsites, Workshops, Netzwerkabende, private Feiern und Fotoshootings. Ab 500 € pro Stunde.',
+  title: 'Eventlocation am Wasser Berlin | Shared Horizon',
+  description: 'Außergewöhnliche Eventlocation am Wasser, Berlin-Schmöckwitz. 170 m² Hausboot für Firmenevents & private Feiern. Ab 500 €/Std. — jetzt anfragen.',
   metadataBase: new URL('https://shared-horizon.de'),
-  alternates: { canonical: '/' },
-  icons: { icon: '/favicon.png' },
+  alternates: { canonical: 'https://shared-horizon.de' },
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
+  manifest: '/site.webmanifest',
+  verification: {
+    google: 'GOOGLE_SITE_VERIFICATION_TOKEN',
+  },
   openGraph: {
-    title: 'Shared Horizon — Hausboot in Berlin',
-    description: 'Über 170 m² Hausboot für Events & Offsites. Yachthafen Schmöckwitz.',
-    images: [{ url: '/images/hero-wide.jpg', width: 1200, height: 630, alt: 'Shared Horizon Hausboot' }],
+    title: 'Eventlocation am Wasser Berlin | Shared Horizon',
+    description: 'Außergewöhnliche Eventlocation am Wasser in Berlin-Schmöckwitz. 170 m² Hausboot für Firmenevents, Sommerfeste & private Feiern.',
+    url: 'https://shared-horizon.de',
+    siteName: 'Shared Horizon',
+    images: [{
+      url: '/images/hero-wide.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Shared Horizon — Eventlocation am Wasser in Berlin-Schmöckwitz',
+    }],
     locale: 'de_DE',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Eventlocation am Wasser Berlin | Shared Horizon',
+    description: 'Außergewöhnliche Eventlocation am Wasser, Berlin-Schmöckwitz. 170 m² Hausboot für Firmenevents & private Feiern.',
+    images: ['/images/hero-wide.jpg'],
   },
 };
 
