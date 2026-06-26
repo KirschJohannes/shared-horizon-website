@@ -1,4 +1,5 @@
 import Nav from '../components/Nav';
+import JsonLd from '../components/JsonLd';
 import Hero from '../components/Hero';
 import TrustBar from '../components/TrustBar';
 import IntroVideo from '../components/IntroVideo';
@@ -16,6 +17,7 @@ import Footer from '../components/Footer';
 export default function Home() {
   return (
     <>
+      <JsonLd />
       <Nav />
       <main>
         <Hero />
