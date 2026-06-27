@@ -20,9 +20,9 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <DeckPlan />
-        <TrustBar />
         <IntroVideo />
+        <TrustBar />
+        <DeckPlan />
         <Usages />
         <Facts />
         <AtmoBand />
