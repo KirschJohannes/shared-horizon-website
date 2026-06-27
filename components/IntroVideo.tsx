@@ -45,12 +45,17 @@ export default function IntroVideo() {
                   aria-label="Video abspielen"
                   style={{
                     position:'absolute', inset:0, width:'100%', height:'100%',
-                    background:'#172A2E', border:'none', cursor:'pointer',
+                    backgroundImage:'url(/images/video-thumbnail.webp)',
+                    backgroundSize:'cover', backgroundPosition:'center',
+                    border:'none', cursor:'pointer',
                     display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:20,
                   }}
                 >
+                  {/* overlay for readability */}
+                  <span style={{ position:'absolute', inset:0, background:'rgba(23,42,46,.42)', pointerEvents:'none' }} />
                   {/* Play circle */}
                   <span style={{
+                    position:'relative',
                     width:68, height:68, borderRadius:'50%',
                     border:'1px solid rgba(189,154,100,.6)',
                     display:'flex', alignItems:'center', justifyContent:'center',
@@ -63,7 +68,7 @@ export default function IntroVideo() {
                       <polygon points="5,3 19,12 5,21"/>
                     </svg>
                   </span>
-                  <span style={{ fontFamily:"'Jost',sans-serif", fontSize:11, letterSpacing:'.24em', textTransform:'uppercase', color:'rgba(243,239,231,.55)' }}>
+                  <span style={{ position:'relative', fontFamily:"'Jost',sans-serif", fontSize:11, letterSpacing:'.24em', textTransform:'uppercase', color:'rgba(243,239,231,.8)' }}>
                     Video laden &amp; abspielen
                   </span>
                 </button>
