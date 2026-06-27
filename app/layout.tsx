@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     url: 'https://shared-horizon.de',
     siteName: 'Shared Horizon',
     images: [{
+      // TODO: og-image.jpg (1200×630) in /public/images/ ablegen und Pfad auf /images/og-image.jpg ändern
       url: '/images/hero-wide.jpg',
       width: 1200,
       height: 630,

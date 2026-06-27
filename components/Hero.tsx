@@ -39,7 +39,7 @@ export default function Hero() {
       <div style={{ position:'absolute', inset:0, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 clamp(20px,7vw,120px)', maxWidth:1100 }}>
         <div style={{ opacity:0, animation:'shFade 1.4s cubic-bezier(.22,.61,.36,1) .3s forwards' }}>
           <span style={{ fontSize:12, letterSpacing:'.34em', textTransform:'uppercase', color:'#E4D3B4', fontWeight:500 }}>
-            Hausboot · Brandenburger Seen
+            Eventlocation · Berlin-Schmöckwitz
           </span>
           <div style={{ width:64, height:1, background:'#BD9A64', margin:'22px 0 26px' }} />
         </div>
@@ -66,7 +66,7 @@ export default function Hero() {
             onMouseEnter={e => (e.currentTarget.style.background = '#CBAE80')}
             onMouseLeave={e => (e.currentTarget.style.background = '#BD9A64')}
           >
-            Boot anfragen
+            Verfügbarkeit anfragen
           </button>
         </div>
       </div>
