@@ -6,7 +6,7 @@ export default function AtmoBand() {
   return (
     <section style={{ position:'relative', minHeight:'88vh', display:'flex', alignItems:'center', overflow:'hidden', background:'#172A2E' }}>
       <Image
-        src="/images/drive/atmo.jpg"
+        src="/images/Stimmung/hausboot_01.webp"
         alt="Shared Horizon Abendstimmung"
         fill
         style={{ objectFit:'cover', objectPosition:'50% 50%' }}
