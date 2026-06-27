@@ -20,8 +20,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <IntroVideo />
         <TrustBar />
+        <IntroVideo />
         <DeckPlan />
         <Usages />
         <Facts />

@@ -4,7 +4,7 @@ export default function TrustBar() {
       <div style={{ display:'flex', alignItems:'center', justifyContent:'center', gap:10, flexWrap:'wrap' }}>
         <span style={{ color:'#BD9A64', fontSize:16, letterSpacing:4, lineHeight:1 }}>★★★★★</span>
         <span style={{ fontFamily:"'Jost',sans-serif", fontSize:13.5, fontWeight:300, color:'#F3EFE7', opacity:.9 }}>
-          5,0 · 9 Bewertungen auf Google, Airbnb &amp; Click&amp;Boat
+          5,0 · 21 Bewertungen auf Google
         </span>
         <span style={{ color:'rgba(189,154,100,.35)', fontSize:12 }}>·</span>
         <span style={{ fontFamily:"'Jost',sans-serif", fontSize:11, letterSpacing:'.24em', textTransform:'uppercase', color:'#F3EFE7', opacity:.5 }}>
