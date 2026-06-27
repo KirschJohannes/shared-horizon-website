@@ -1,17 +1,4 @@
-import type { JourneyItem, Hotspot, Usage, Fact, GalleryItem, GalCat, FaqItem, EvType, EvOption } from './types';
-
-export const journey: JourneyItem[] = [
-  { n:'I',    title:'Ankommen',                       line:'Der Steg, das Wasser, der erste Schritt an Bord.',  src:'/images/drive/jr1.jpg' },
-  { n:'II',   title:'Offene Wohnküche',               line:'Die Glastür öffnet sich, drinnen wird es hell.',    src:'/images/drive/jr2.jpg' },
-  { n:'III',  title:'Vollausgestattete Küche',        line:'Licht von allen Seiten, der See ringsum.',          src:'/images/drive/jr3.jpg' },
-  { n:'IV',   title:'Gemütlicher Sitzbereich',        line:'Die Sonne erreicht aus jedem Winkel.',              src:'/images/drive/jr4.jpg' },
-  { n:'V',    title:'Dinner for 6',                   line:'Begegnungen, die in Erinnerung bleiben.',           src:'/images/drive/steuer.jpg' },
-  { n:'VI',   title:'Bad mit Seeblick',               line:'Besonders, aber privat.',                           src:'/images/drive/bad.jpg' },
-  { n:'VII',  title:'Bugterrasse',                    line:'Intime Gespräche mit Weitblick.',                   src:'/images/drive/heck.jpg' },
-  { n:'VIII', title:'Privater Rückzugsort',           line:'Gemütlich und separiert.',                          src:'/images/drive/rueck.jpg' },
-  { n:'IX',   title:'Essbereich unter freiem Himmel', line:'Gutes Essen mit Sonnenkuss.',                       src:'/images/drive/jr9.jpg' },
-  { n:'X',    title:'Sonnendeck mit großer Lounge',   line:'Für kleine und große Runden',                       src:'/images/drive/bug.jpg' },
-];
+import type { Hotspot, Usage, Fact, GalleryItem, GalCat, FaqItem, EvType, EvOption } from './types';
 
 export const hotspots: Hotspot[] = [
   { id:'heck',    x:2.2,  y:46.9, n:1, title:'Heckterrasse',            text:'Die Heckterrasse misst 6 × 2,5 m und bietet den Aufgang zur Dachterrasse. Der Übergang zwischen den Ebenen an Bord.',              ideas:'Aufgang Dachterrasse · Außenbereich',   facts:'6 × 2,5 m · Aufgang Dachterrasse',     img:'/images/drive/heck.jpg' },

@@ -1,10 +1,3 @@
-export interface JourneyItem {
-  n: string;
-  title: string;
-  line: string;
-  src: string;
-}
-
 export interface Hotspot {
   id: string;
   x: number;

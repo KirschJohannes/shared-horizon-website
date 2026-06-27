@@ -116,8 +116,13 @@ export default function Anfrage() {
                   <input name="telefon" type="tel" style={inputStyle} />
                 </label>
                 <label style={labelStyle}>
-                  <span style={eyebrowStyle}>Zeitraum</span>
-                  <input name="zeitraum" type="text" placeholder="z. B. Sept. 2026" style={inputStyle} />
+                  <span style={eyebrowStyle}>Wunschtermin</span>
+                  <input
+                    name="zeitraum"
+                    type="date"
+                    min={new Date().toISOString().split('T')[0]}
+                    style={{ ...inputStyle, colorScheme:'light' }}
+                  />
                 </label>
               </div>
               <div style={{ display:'flex', flexWrap:'wrap', gap:20 }}>

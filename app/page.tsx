@@ -3,7 +3,6 @@ import JsonLd from '../components/JsonLd';
 import Hero from '../components/Hero';
 import TrustBar from '../components/TrustBar';
 import IntroVideo from '../components/IntroVideo';
-import Journey from '../components/Journey';
 import Usages from '../components/Usages';
 import DeckPlan from '../components/DeckPlan';
 import Facts from '../components/Facts';
@@ -21,11 +20,10 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <DeckPlan />
         <TrustBar />
         <IntroVideo />
-        <Journey />
         <Usages />
-        <DeckPlan />
         <Facts />
         <AtmoBand />
         <Gallery />
