@@ -20,8 +20,7 @@ export const metadata: Metadata = {
     url: 'https://shared-horizon.de',
     siteName: 'Shared Horizon',
     images: [{
-      // TODO: og-image.jpg (1200×630) in /public/images/ ablegen und Pfad auf /images/og-image.jpg ändern
-      url: '/images/hero-wide.jpg',
+      url: '/images/og-image-foto.png',
       width: 1200,
       height: 630,
       alt: 'Shared Horizon — Eventlocation am Wasser in Berlin-Schmöckwitz',
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Eventlocation am Wasser Berlin | Shared Horizon',
     description: 'Außergewöhnliche Eventlocation am Wasser, Berlin-Schmöckwitz. 170 m² Hausboot für Firmenevents & private Feiern.',
-    images: ['/images/hero-wide.jpg'],
+    images: ['/images/og-image-foto.png'],
   },
 };
 
