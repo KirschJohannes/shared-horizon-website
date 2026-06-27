@@ -8,11 +8,11 @@ import ScrollReveal from './ScrollReveal';
 const MOBILE_LIMIT = 6;
 
 export default function Gallery() {
-  const [filter, setFilter] = useState('alle');
+  const [filter, setFilter] = useState(galCats[0].id);
   const [lbIdx, setLbIdx] = useState(-1);
   const [expanded, setExpanded] = useState(false);
 
-  const filtered = filter === 'alle' ? gallery : gallery.filter(g => g.cat === filter);
+  const filtered = gallery.filter(g => g.cat === filter);
   const lbItem = lbIdx >= 0 ? filtered[lbIdx] : null;
 
   return (

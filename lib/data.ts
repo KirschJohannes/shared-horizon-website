@@ -55,15 +55,14 @@ export const faqs: FaqItem[] = [
 ];
 
 export const galCats: GalCat[] = [
-  { id:'alle',       label:'Alle' },
-  { id:'kulinar',    label:'Kulinarisches' },
-  { id:'boot',       label:'Das Boot' },
-  { id:'production', label:'Produktion' },
-  { id:'details',    label:'Details' },
-  { id:'sport',      label:'Sport & Wasser' },
-  { id:'event',      label:'Eventfotos' },
-  { id:'stimmung',   label:'Stimmung' },
   { id:'gesamt',     label:'Gesamtansicht' },
+  { id:'boot',       label:'Das Boot' },
+  { id:'details',    label:'Details' },
+  { id:'stimmung',   label:'Stimmung' },
+  { id:'event',      label:'Eventfotos' },
+  { id:'kulinar',    label:'Kulinarisches' },
+  { id:'sport',      label:'Sport & Wasser' },
+  { id:'production', label:'Produktion' },
 ];
 
 export const gallery: GalleryItem[] = [
