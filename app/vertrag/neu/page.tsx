@@ -411,24 +411,34 @@ export default function NeuPage() {
           >
             Vorschau ansehen
           </button>
-          <div className="flex items-center gap-3">
-            <Button
-              variant="outline"
-              onClick={handleKopieren}
-              type="button"
-              disabled={!generatedLink}
-            >
-              {copyState === "copied" ? "Kopiert" : "Link kopieren"}
-            </Button>
-            <Button variant="primary" onClick={handleErzeugen} type="button">
-              Vertrag erzeugen
-            </Button>
-          </div>
+          <Button variant="primary" onClick={handleErzeugen} type="button">
+            Vertrag erzeugen
+          </Button>
         </div>
         {generatedLink && (
-          <div className="border-t border-stone bg-cream px-10 py-4">
-            <div className="break-all font-mono text-[12px] text-navy">
-              {generatedLink}
+          <div className="border-t border-stone bg-cream px-10 py-6">
+            <div className="flex flex-col gap-3">
+              <Eyebrow>Link zum Vertrag</Eyebrow>
+              <div className="flex items-stretch gap-3">
+                <div className="flex-1 overflow-x-auto whitespace-nowrap border border-stone bg-paper px-4 py-3 font-mono text-[12px] text-navy">
+                  {generatedLink}
+                </div>
+                <Button
+                  variant="outline"
+                  onClick={handleKopieren}
+                  type="button"
+                  className="shrink-0"
+                >
+                  {copyState === "copied" ? "Kopiert" : "Link kopieren"}
+                </Button>
+              </div>
+              <a
+                href={`whatsapp://send?text=${encodeURIComponent(generatedLink)}`}
+              >
+                <Button variant="primary" type="button" className="w-full">
+                  Per WhatsApp teilen
+                </Button>
+              </a>
             </div>
           </div>
         )}
@@ -452,7 +462,7 @@ export default function NeuPage() {
             </button>
           </div>
           <div className="flex-1 px-6 pb-16">
-            <Contract data={previewData} />
+            <Contract data={previewData} maxWidth="800px" />
           </div>
         </div>
       )}

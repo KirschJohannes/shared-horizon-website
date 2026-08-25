@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Contract } from "@/components/vertrag/Contract";
 import { HorizonRule } from "@/components/vertrag/HorizonRule";
 import { Eyebrow } from "@/components/vertrag/Eyebrow";
@@ -56,6 +57,7 @@ const t = {
 };
 
 export default function VertragPage() {
+  const router = useRouter();
   const [data, setData] = useState<ContractData | null | "invalid">(null);
   const [ort, setOrt] = useState("");
   const [hasSignature, setHasSignature] = useState(false);
@@ -65,12 +67,15 @@ export default function VertragPage() {
 
   // window.location.hash is a browser-only API and unavailable during SSR —
   // this can't be read during render without a hydration mismatch, so the
-  // effect (and its setState calls) is the correct tool here.
+  // effect (and its setState calls) is the correct tool here. A fragment
+  // never reaches the server, so /vertrag with no hash can only mean someone
+  // (the Vermieter) typed the bare URL — send them to the actual form
+  // instead of showing an error. A real Mieter-Link always carries a hash.
   /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     const hash = window.location.hash.replace(/^#/, "");
     if (!hash) {
-      setData("invalid");
+      router.replace("/vertrag/neu");
       return;
     }
     try {
@@ -78,7 +83,7 @@ export default function VertragPage() {
     } catch {
       setData("invalid");
     }
-  }, []);
+  }, [router]);
   /* eslint-enable react-hooks/set-state-in-effect */
 
   if (data === null) return null;

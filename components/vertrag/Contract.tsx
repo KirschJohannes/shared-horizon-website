@@ -230,7 +230,14 @@ function SectionBlock({
   );
 }
 
-export function Contract({ data }: { data: ContractData }) {
+export function Contract({
+  data,
+  maxWidth = "390px",
+}: {
+  data: ContractData;
+  /** Tailwind arbitrary max-width, z. B. "390px" (Mieter-Handyansicht) oder "800px" (Desktop-Vorschau). */
+  maxWidth?: string;
+}) {
   const t = labels[data.lang];
   const sections = useMemo(() => buildSections(data), [data]);
   const total = sections.length;
@@ -256,7 +263,10 @@ export function Contract({ data }: { data: ContractData }) {
   const active = sections[Math.min(activeIndex, total - 1)];
 
   return (
-    <div className="mx-auto flex w-full max-w-[390px] flex-col border border-stone bg-paper">
+    <div
+      className="mx-auto flex w-full flex-col border border-stone bg-paper"
+      style={{ maxWidth }}
+    >
       <div className="sticky top-0 z-10 flex flex-col gap-2.5 border-b border-stone bg-paper px-[22px] pb-3 pt-4">
         <div className="flex items-baseline justify-between">
           <span className="text-[9px] tracking-[0.3em] text-navy">
