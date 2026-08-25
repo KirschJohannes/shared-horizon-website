@@ -49,6 +49,55 @@
 
 @import "tailwindcss";
 
+/* Vertrags-App (/vertrag) — Tailwind-Tokens auf denselben Marken-Hexwerten, die
+   der Rest der Seite bereits inline verwendet (siehe body/Selection unten). */
+@theme {
+  --color-navy: #172a2e;
+  --color-navy-800: #20393c;
+  --color-navy-700: #2e4a4c;
+  --color-navy-600: #466163;
+  --color-brass: #bd9a64;
+  --color-brass-deep: #a07e4a;
+  --color-brass-600: #cbae80;
+  --color-brass-soft: #e4d3b4;
+  --color-cream: #f3efe7;
+  --color-paper: #fbfaf7;
+  --color-stone: #e6e0d5;
+  --color-stone-300: #d2cbbd;
+  --color-stone-500: #9c9488;
+  --color-canvas: #efebe3;
+  --color-ink: #2a3b3e;
+
+  --font-heading: "Cormorant", Georgia, serif;
+  --font-body: "Jost", system-ui, sans-serif;
+}
+
+/* Scoped to the Vertrags-App only — do not affect the rest of the site. */
+.vertrag-app,
+.vertrag-app *,
+.vertrag-app *::before,
+.vertrag-app *::after {
+  border-radius: 0 !important;
+}
+.vertrag-app {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+.vertrag-app ::placeholder {
+  color: #c4bdb0;
+}
+.vertrag-app input,
+.vertrag-app select,
+.vertrag-app textarea {
+  font-family: var(--font-body);
+}
+.vertrag-app input:focus,
+.vertrag-app select:focus,
+.vertrag-app textarea:focus {
+  outline: none;
+  border-color: var(--color-brass);
+}
+
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
