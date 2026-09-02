@@ -10,7 +10,7 @@ export default function Faq() {
     <section style={{ background:'#FBFAF7', padding:'clamp(70px,9vw,130px) clamp(20px,7vw,120px)' }}>
       <div style={{ maxWidth:980, margin:'0 auto' }}>
         <ScrollReveal style={{ maxWidth:680, marginBottom:'clamp(40px,5vw,60px)' }}>
-          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#A07E4A', fontWeight:500 }}>Vertrauen &amp; Klarheit</span>
+          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#80643B', fontWeight:500 }}>Vertrauen &amp; Klarheit</span>
           <h2 style={{ fontFamily:"'Cormorant',serif", fontWeight:500, fontSize:'clamp(34px,5vw,64px)', lineHeight:1.04, color:'#172A2E', margin:'22px 0 0' }}>
             Das Wichtigste, ruhig erklärt.
           </h2>

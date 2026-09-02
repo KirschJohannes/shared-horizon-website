@@ -19,10 +19,13 @@ export default function Gallery() {
     <section id="galerie" style={{ background:'#FBFAF7', padding:'clamp(70px,9vw,130px) clamp(20px,7vw,120px)', scrollMarginTop:64 }}>
       <div style={{ maxWidth:1320, margin:'0 auto' }}>
         <ScrollReveal style={{ maxWidth:680, marginBottom:'clamp(36px,4vw,52px)' }}>
-          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#A07E4A', fontWeight:500 }}>Galerie</span>
+          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#80643B', fontWeight:500 }}>Galerie</span>
           <h2 style={{ fontFamily:"'Cormorant',serif", fontWeight:500, fontSize:'clamp(34px,5vw,64px)', lineHeight:1.04, color:'#172A2E', margin:'22px 0 0' }}>
-            Bilder sagen mehr als 1000 Worte
+            „Es sieht wirklich genau so aus wie auf den Fotos.“
           </h2>
+          <p style={{ fontFamily:"'Jost',sans-serif", fontWeight:300, fontSize:14, letterSpacing:'.02em', color:'#9C9488', margin:'14px 0 0' }}>
+            Das hören wir von unseren Gästen immer wieder.
+          </p>
         </ScrollReveal>
 
         {/* Filter chips */}

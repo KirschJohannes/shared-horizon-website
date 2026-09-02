@@ -3,6 +3,16 @@ import { useState, useCallback } from 'react';
 import { evTypes, evMap } from '../lib/data';
 import ScrollReveal from './ScrollReveal';
 
+// Bildet Setup-Planer-IDs auf die exakten <option>-Texte im Anfrage-Formular
+// (components/Anfrage.tsx) ab — "Content Day" heißt dort "Fotoshooting".
+const nutzungForForm: Record<string, string> = {
+  offsite: 'Business-Offsite',
+  feier: 'Private Feier',
+  netzwerk: 'Netzwerkabend',
+  dinner: 'Dinner',
+  foto: 'Fotoshooting',
+};
+
 export default function SetupPlanner() {
   const [evType, setEvType] = useState('offsite');
   const [guests, setGuests] = useState(12);
@@ -10,10 +20,11 @@ export default function SetupPlanner() {
   const ev = evMap[evType];
   const evFormat = guests <= 12 ? 'Sitzend an einer Tafel' : guests <= 16 ? 'Sitzen mit Stehbereich' : 'Empfang mit Stehzonen';
 
-  const scrollTo = useCallback(() => {
+  const requestSetup = useCallback(() => {
+    window.dispatchEvent(new CustomEvent('setup-anfrage', { detail: { nutzung: nutzungForForm[evType], personen: guests } }));
     const el = document.getElementById('anfrage');
     if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 64, behavior: 'smooth' });
-  }, []);
+  }, [evType, guests]);
 
   return (
     <section style={{ background:'#172A2E', color:'#F3EFE7', padding:'clamp(70px,9vw,130px) clamp(20px,7vw,120px)' }}>
@@ -56,7 +67,7 @@ export default function SetupPlanner() {
               <span style={{ fontFamily:"'Jost',sans-serif", fontSize:14, color:'#F3EFE7', opacity:.7 }}>Gäste · {evFormat}</span>
             </div>
             <input
-              type="range" min={2} max={24} step={1} value={guests}
+              type="range" min={2} max={25} step={1} value={guests}
               onChange={e => setGuests(parseInt(e.target.value, 10))}
               style={{ width:'100%', height:4, cursor:'pointer', margin:'0 0 clamp(36px,4vw,48px)' }}
             />
@@ -76,7 +87,7 @@ export default function SetupPlanner() {
               </div>
               <div style={{ flexShrink:0, alignSelf:'center' }}>
                 <button
-                  onClick={scrollTo}
+                  onClick={requestSetup}
                   style={{ fontFamily:"'Jost',sans-serif", fontSize:13, fontWeight:500, letterSpacing:'.16em', textTransform:'uppercase', color:'#172A2E', background:'#BD9A64', border:'1px solid #BD9A64', borderRadius:2, padding:'16px 34px', cursor:'pointer' }}
                   onMouseEnter={e => (e.currentTarget.style.background='#CBAE80')}
                   onMouseLeave={e => (e.currentTarget.style.background='#BD9A64')}

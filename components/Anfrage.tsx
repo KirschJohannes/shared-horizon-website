@@ -1,5 +1,5 @@
 'use client';
-import { useState, FormEvent } from 'react';
+import { useState, useEffect, FormEvent } from 'react';
 import ScrollReveal from './ScrollReveal';
 
 const WA_ICON = (
@@ -31,6 +31,27 @@ export default function Anfrage() {
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const [nutzung, setNutzung] = useState('');
+  const [personen, setPersonen] = useState('');
+  const [nachricht, setNachricht] = useState(
+    'Wir interessieren uns für Shared Horizon und würden uns über Informationen zur Verfügbarkeit freuen.',
+  );
+
+  // Übernimmt Nutzungsart + Personenzahl aus dem Setup-Planer, wenn dort
+  // "Dieses Setup anfragen" geklickt wurde (siehe components/SetupPlanner.tsx),
+  // und formuliert die Nachricht passend dazu vor.
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const { nutzung, personen } = (e as CustomEvent<{ nutzung: string; personen: number }>).detail;
+      setNutzung(nutzung);
+      setPersonen(String(personen));
+      setNachricht(
+        `Wir interessieren uns für ein ${nutzung}-Setup mit ca. ${personen} Personen. Bitte teilen Sie uns die Verfügbarkeit mit.`,
+      );
+    };
+    window.addEventListener('setup-anfrage', handler);
+    return () => window.removeEventListener('setup-anfrage', handler);
+  }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -64,9 +85,9 @@ export default function Anfrage() {
 
         {/* Left column */}
         <ScrollReveal style={{ flex:'1 1 380px', minWidth:'min(100%,300px)' }}>
-          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#A07E4A', fontWeight:500 }}>Anfrage</span>
+          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#80643B', fontWeight:500 }}>Anfrage</span>
           <h2 style={{ fontFamily:"'Cormorant',serif", fontWeight:500, fontSize:'clamp(24px,3vw,42px)', lineHeight:1.12, color:'#172A2E', margin:'16px 0 0', letterSpacing:'.005em' }}>
-            Ein Tag auf der Shared Horizon,<br />bereits ab rund 20 Euro pro Person und Stunde.
+            Ein Tag auf der Shared Horizon,<br />geteilt schon ab rund 20 Euro pro Person und Stunde.
           </h2>
           <p style={{ fontFamily:"'Jost',sans-serif", fontWeight:300, fontSize:'clamp(16px,1.3vw,18px)', lineHeight:1.75, color:'#2A3B3E', margin:'28px 0 0', maxWidth:420 }}>
             500 € pro Stunde für das ganze Boot — gesamte Ausstattung, Skipper, Grill und Pizzaofen inklusive. In der Gruppe geteilt ein Bruchteil einer klassischen Eventlocation. Wer mehr möchte: Catering, eFoil und SUP als Add-on.
@@ -128,7 +149,8 @@ export default function Anfrage() {
               <div style={{ display:'flex', flexWrap:'wrap', gap:20 }}>
                 <label style={labelStyle}>
                   <span style={eyebrowStyle}>Art der Nutzung</span>
-                  <select name="nutzung" style={{ ...inputStyle, cursor:'pointer' }}>
+                  <select name="nutzung" value={nutzung} onChange={e => setNutzung(e.target.value)} style={{ ...inputStyle, cursor:'pointer' }}>
+                    <option value=""></option>
                     <option>Business-Offsite</option>
                     <option>Private Feier</option>
                     <option>Netzwerkabend</option>
@@ -140,12 +162,12 @@ export default function Anfrage() {
                 </label>
                 <label style={labelStyle}>
                   <span style={eyebrowStyle}>Personenzahl</span>
-                  <input name="personen" type="text" placeholder="z. B. 12" style={inputStyle} />
+                  <input name="personen" type="text" placeholder="z. B. 12" value={personen} onChange={e => setPersonen(e.target.value)} style={inputStyle} />
                 </label>
               </div>
               <label style={{ display:'flex', flexDirection:'column', gap:8 }}>
                 <span style={eyebrowStyle}>Nachricht</span>
-                <textarea name="nachricht" rows={3} style={{ ...inputStyle, resize:'vertical' }} />
+                <textarea name="nachricht" rows={3} value={nachricht} onChange={e => setNachricht(e.target.value)} style={{ ...inputStyle, resize:'vertical' }} />
               </label>
               <label style={{ display:'flex', alignItems:'flex-start', gap:12, cursor:'pointer' }}>
                 <input name="dsgvo" type="checkbox" required style={{ marginTop:3, accentColor:'#BD9A64', width:16, height:16, flexShrink:0 }} />

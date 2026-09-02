@@ -76,7 +76,6 @@ export default function Footer() {
             <div style={{ fontSize:11, letterSpacing:'.28em', textTransform:'uppercase', color:'#BD9A64', marginBottom:18 }}>Folgen</div>
             <div style={{ display:'flex', flexDirection:'column', gap:11 }}>
               <a href="https://instagram.com/shared.horizon" target="_blank" rel="noopener" style={linkStyle}>Instagram</a>
-              <a href="#anfrage" style={linkStyle}>Updates erhalten</a>
             </div>
           </div>
         </div>

@@ -15,15 +15,15 @@ export default function IntroVideo() {
 
         {/* Text */}
         <ScrollReveal style={{ flex:'1 1 420px', minWidth:'min(100%,320px)' }}>
-          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#A07E4A', fontWeight:500, display:'block' }}>
+          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#80643B', fontWeight:500, display:'block' }}>
             Shared Horizon
           </span>
           <div style={{ width:48, height:1, background:'#BD9A64', margin:'24px 0 32px' }} />
           <p style={{ fontFamily:"'Cormorant',serif", fontWeight:500, fontSize:'clamp(25px,3vw,42px)', lineHeight:1.22, color:'#172A2E', margin:0, letterSpacing:'.005em' }}>
-            Ein besonderer Ort auf dem Wasser. Offen, hell und ruhig — ein Rahmen für Gespräche, Ideen und Momente, die bleiben.
+            Ein privates Hausboot für bis zu 25 Gäste.
           </p>
           <p style={{ fontFamily:"'Jost',sans-serif", fontWeight:300, fontSize:'clamp(16px,1.3vw,18px)', lineHeight:1.75, color:'#2A3B3E', margin:'30px 0 0', letterSpacing:'.01em', maxWidth:520 }}>
-            Für Menschen, die Abstand vom Gewöhnlichen suchen. Kein gemieteter Raum, sondern eine Lage: über 170 Quadratmeter, umlaufendes Glas, eine Dachterrasse über dem See. Der Alltag bleibt am Ufer.
+            Keine geteilte Location, sondern ein Boot ganz für Sie: 170 m², umlaufendes Glas, Dachterrasse über dem See. Für Firmenfeiern, Workshops, Fotoshootings oder private Feiern — exklusiv gebucht, nicht geteilt.
           </p>
         </ScrollReveal>
 
@@ -56,7 +56,7 @@ export default function IntroVideo() {
           <div style={{ display:'flex', alignItems:'center', gap:12, marginTop:18 }}>
             <span style={{ width:30, height:1, background:'#BD9A64', opacity:.6, flexShrink:0 }} />
             <span style={{ fontFamily:"'Jost',sans-serif", fontSize:11.5, letterSpacing:'.22em', textTransform:'uppercase', color:'#9C9488' }}>
-              Tauchen Sie ein in die Welt der Shared Horizon
+              Rundgang durchs Boot ansehen
             </span>
           </div>
         </ScrollReveal>

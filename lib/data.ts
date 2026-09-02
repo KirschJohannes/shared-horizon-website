@@ -27,19 +27,15 @@ export const facts: Fact[] = [
   { num:'16,5', unit:'Meter', label:'Länge' },
   { num:'6,2',  unit:'Meter', label:'Breite' },
   { num:'170+', unit:'m²',    label:'Gesamtfläche' },
-  { num:'70',   unit:'m²',    label:'Innenfläche' },
-  { num:'20',   unit:'m²',    label:'Solarfläche' },
-  { num:'~20',  unit:'Gäste', label:'Empfohlen' },
-];
-
-export const features: string[] = [
-  'Umlaufendes Panorama-Glas', 'WPC-Decking', 'Dachterrasse',
-  'Helle, offene Architektur', 'Direkte Wasserlage', 'Flexible Nutzung',
+  { num:'70',   unit:'m²',    label:'Sonnendeck' },
 ];
 
 export const feelings: string[] = [
-  'Licht von allen Seiten.', 'Wasser direkt vor Ihnen.', 'Abstand vom Alltag.',
-  'Gespräche, die länger bleiben.', 'Sonnenuntergang auf dem Deck.', 'Ein Raum, der ruhiger macht.',
+  'Abschalten, sobald Sie den Hafen verlassen.',
+  'Gäste, die für zwei Stunden kamen, bleiben den ganzen Tag.',
+  'Die schönsten Sonnenuntergänge der Stadt — weiter Blick übers Wasser.',
+  'Schwäne, Enten und Möwen zu Besuch, manchmal sogar ein Biber.',
+  'Auch bei Regen: das Prasseln auf dem Wasser, beruhigend und schön.',
 ];
 
 export const faqs: FaqItem[] = [

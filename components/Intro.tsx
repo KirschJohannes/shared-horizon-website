@@ -5,7 +5,7 @@ export default function Intro() {
     <section style={{ background:'#FBFAF7', padding:'clamp(80px,12vw,160px) clamp(20px,7vw,120px)' }}>
       <div style={{ maxWidth:1000, margin:'0 auto', textAlign:'center' }}>
         <ScrollReveal>
-          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#A07E4A', fontWeight:500, display:'block' }}>
+          <span style={{ fontSize:12, letterSpacing:'.32em', textTransform:'uppercase', color:'#80643B', fontWeight:500, display:'block' }}>
             Shared Horizon
           </span>
         </ScrollReveal>
