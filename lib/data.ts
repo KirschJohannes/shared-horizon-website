@@ -43,7 +43,7 @@ export const feelings: string[] = [
 ];
 
 export const faqs: FaqItem[] = [
-  { q:'Was kostet die Miete des Hausboots?', a:'500 € pro Stunde für das gesamte Boot — exklusiv gebucht, nicht geteilt, inklusive Ausstattung und Skipper. In der Gruppe geteilt liegt der Preis pro Person bei voller Kapazität bei rund 20 € pro Stunde. Details unter shared-horizon.de/pricing.md oder auf Anfrage.' },
+  { q:'Was kostet die Miete des Hausboots?', a:'500 € pro Stunde für das gesamte Boot — exklusiv gebucht, nicht geteilt, inklusive Ausstattung und Skipper. In der Gruppe geteilt liegt der Preis pro Person bei voller Kapazität bei rund 20 € pro Stunde. Genaue Details stimmen wir gern auf Ihren Anlass ab.' },
   { q:'Für wie viele Personen ist Shared Horizon geeignet?', a:'Das Boot ist für kleine, hochwertige Runden gedacht. Für Sitz-Settings empfehlen wir bis etwa 12 Personen, für Empfänge mit Stehbereichen bis rund 20 Gäste, und für Veranstaltungen auf der Dachterrasse bis zu 25 Personen. Die genaue Zahl stimmen wir gern auf Ihren Anlass ab.' },
   { q:'Muss ich selbst fahren, oder gibt es einen Skipper?', a:'Ein Skipper ist immer inklusive. Sie müssen selbst nicht fahren und können sich ganz auf Ihren Anlass konzentrieren.' },
   { q:'Wie komme ich zum Hausboot?', a:'Shared Horizon liegt im Yachthafen Schmöckwitz, Weiselpfad 20, 12527 Berlin — rund 30 Minuten vom Berliner Zentrum entfernt. Am Anleger stehen öffentliche Parkplätze zur Verfügung.' },

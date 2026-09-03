@@ -59,7 +59,7 @@ export default function Hero() {
           margin:'30px 0 0', letterSpacing:'.01em',
           opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .7s forwards',
         }}>
-          Über 170 Quadratmeter, umlaufendes Glas und eine Dachterrasse über dem See. Für Events, Offsites und Momente, die Abstand vom Alltag schaffen.
+          Ein Ort mitten auf dem Wasser, für Momente, die Abstand vom Alltag schaffen und lange in Erinnerung bleiben.
         </p>
         <div style={{ display:'flex', flexWrap:'wrap', gap:16, marginTop:42, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .9s forwards' }}>
           <button
