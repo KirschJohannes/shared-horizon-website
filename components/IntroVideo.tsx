@@ -20,10 +20,10 @@ export default function IntroVideo() {
           </span>
           <div style={{ width:48, height:1, background:'#BD9A64', margin:'24px 0 32px' }} />
           <p style={{ fontFamily:"'Cormorant',serif", fontWeight:500, fontSize:'clamp(25px,3vw,42px)', lineHeight:1.22, color:'#172A2E', margin:0, letterSpacing:'.005em' }}>
-            Ein privates Hausboot für bis zu 25 Gäste.
+            Ein privates Hausboot vor den Toren Berlins. Für bis zu 25 Gäste — nur 30 Minuten vom Zentrum.
           </p>
           <p style={{ fontFamily:"'Jost',sans-serif", fontWeight:300, fontSize:'clamp(16px,1.3vw,18px)', lineHeight:1.75, color:'#2A3B3E', margin:'30px 0 0', letterSpacing:'.01em', maxWidth:520 }}>
-            Keine geteilte Location, sondern ein Boot ganz für Sie: 170 m², umlaufendes Glas, Dachterrasse über dem See. Für Firmenfeiern, Workshops, Fotoshootings oder private Feiern — exklusiv gebucht, nicht geteilt.
+            Ein exklusives Erlebnis auf dem Wasser, ganz für Sie und Ihre Gäste: 170 m² Fläche, 360°-Dachterrasse mit Blick über den See und die Wälder. Für private Feiern, Geburtstage, Firmenfeiern, Workshops oder Fotoshootings — exklusiv gebucht, nicht geteilt.
           </p>
         </ScrollReveal>
 
