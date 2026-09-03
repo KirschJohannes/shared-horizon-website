@@ -1,5 +1,9 @@
 import type { Hotspot, Usage, Fact, GalleryItem, GalCat, FaqItem, EvType, EvOption } from './types';
 
+// Von Hand nachpflegen, wenn Inhalte/Preise sich ändern — dient als
+// Aktualitäts-Signal für Suchmaschinen und KI-Systeme (Footer + JsonLd).
+export const lastUpdated = '2026-09-03';
+
 export const hotspots: Hotspot[] = [
   { id:'heck',    x:2.2,  y:46.9, n:1, title:'Heckterrasse',            text:'Die Heckterrasse misst 6 × 2,5 m und bietet den Aufgang zur Dachterrasse. Der Übergang zwischen den Ebenen an Bord.',              ideas:'Aufgang Dachterrasse · Außenbereich',   facts:'6 × 2,5 m · Aufgang Dachterrasse',     img:'/images/das_boot/heckterrasse.webp' },
   { id:'kueche',  x:19.6, y:46.2, n:2, title:'Wohn- & Loungebereich',   text:'Der offene Wohn- und Loungebereich — großzügig, hell und mit direktem Blick aufs Wasser. Ideal zum Ankommen, Entspannen und Beisammensein.', ideas:'Lounge · Gespräche · Entspannung',      facts:'Offener Bereich · umlaufendes Glas',    img:'/images/das_boot/lounge.webp' },
@@ -39,7 +43,10 @@ export const feelings: string[] = [
 ];
 
 export const faqs: FaqItem[] = [
+  { q:'Was kostet die Miete des Hausboots?', a:'500 € pro Stunde für das gesamte Boot — exklusiv gebucht, nicht geteilt, inklusive Ausstattung und Skipper. In der Gruppe geteilt liegt der Preis pro Person bei voller Kapazität bei rund 20 € pro Stunde. Details unter shared-horizon.de/pricing.md oder auf Anfrage.' },
   { q:'Für wie viele Personen ist Shared Horizon geeignet?', a:'Das Boot ist für kleine, hochwertige Runden gedacht. Für Sitz-Settings empfehlen wir bis etwa 12 Personen, für Empfänge mit Stehbereichen bis rund 20 Gäste, und für Veranstaltungen auf der Dachterrasse bis zu 25 Personen. Die genaue Zahl stimmen wir gern auf Ihren Anlass ab.' },
+  { q:'Muss ich selbst fahren, oder gibt es einen Skipper?', a:'Ein Skipper ist immer inklusive. Sie müssen selbst nicht fahren und können sich ganz auf Ihren Anlass konzentrieren.' },
+  { q:'Wie komme ich zum Hausboot?', a:'Shared Horizon liegt im Yachthafen Schmöckwitz, Weiselpfad 20, 12527 Berlin — rund 30 Minuten vom Berliner Zentrum entfernt. Am Anleger stehen öffentliche Parkplätze zur Verfügung.' },
   { q:'Welche Arten von Events sind möglich?', a:'Business-Offsites, Workshops, Netzwerkabende, private Feiern, Dinner, Fotoshootings und Retreats. Wenn Ihre Idee hier nicht steht, sprechen Sie uns einfach an.' },
   { q:'Gibt es Catering?', a:'An Bord gibt es einen Grill und Pizzaofen. Die Bordküche kann vollumfänglich benutzt werden. Catering kann mitgebracht werden.' },
   { q:'Gibt es Technik?', a:'Stromanschluss, Musikanlage, Beamer und Leinwand sind an Bord vorhanden.' },

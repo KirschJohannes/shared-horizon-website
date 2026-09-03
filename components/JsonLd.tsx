@@ -1,4 +1,4 @@
-import { faqs } from '../lib/data';
+import { faqs, lastUpdated } from '../lib/data';
 
 const BASE_URL = 'https://shared-horizon.de';
 
@@ -8,6 +8,7 @@ const eventVenueSchema = {
   name: 'Shared Horizon',
   description: 'Außergewöhnliche Eventlocation am Wasser in Berlin-Schmöckwitz. Über 170 m² Hausboot für Firmenevents, Sommerfeste, Hochzeiten und private Feiern.',
   url: BASE_URL,
+  dateModified: lastUpdated,
   telephone: '+49 176 32479050',
   email: 'anfrage@shared-horizon.de',
   priceRange: '€€€',

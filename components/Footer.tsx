@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { lastUpdated } from '../lib/data';
 
 const WA_ICON = (
   <svg width="19" height="19" viewBox="0 0 24 24" fill="#BD9A64" aria-hidden="true">
@@ -83,7 +84,7 @@ export default function Footer() {
         <div style={{ height:1, background:'linear-gradient(90deg,transparent,#BD9A64 18%,#BD9A64 82%,transparent)', opacity:.45, margin:'56px 0 28px' }} />
 
         <div style={{ display:'flex', flexWrap:'wrap', gap:'18px 32px', justifyContent:'space-between', alignItems:'center', fontFamily:"'Jost',sans-serif", fontSize:12, letterSpacing:'.04em', color:'rgba(243,239,231,.55)' }}>
-          <span>© {new Date().getFullYear()} Shared Horizon</span>
+          <span>© {new Date().getFullYear()} Shared Horizon · Zuletzt aktualisiert {lastUpdated}</span>
           <div style={{ display:'flex', gap:28 }}>
             <a href="/impressum" style={{ transition:'color .2s' }}>Impressum</a>
             <a href="/datenschutz" style={{ transition:'color .2s' }}>Datenschutz</a>
