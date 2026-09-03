@@ -48,8 +48,8 @@ export default function Hero() {
           fontSize:'clamp(42px,7.4vw,102px)', lineHeight:.98, letterSpacing:'.005em',
           margin:0, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .5s forwards',
         }}>
-          <span style={{ display:'block' }}>Ihr exklusives</span>
-          <span style={{ display:'block' }}>Hausboot auf dem Wasser.</span>
+          <span style={{ display:'block' }}>Ihr exklusives Hausboot</span>
+          <span style={{ display:'block' }}>vor den Toren Berlins.</span>
         </h1>
         <p style={{
           fontFamily:"'Jost',sans-serif", fontWeight:300, color:'#F3EFE7',
