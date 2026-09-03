@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="top" className="hero-section" style={{ position:'relative', minHeight:600, width:'100%', overflow:'hidden', background:'#172A2E' }}>
+    <section id="top" style={{ position:'relative', height:'100vh', minHeight:600, width:'100%', overflow:'hidden', background:'#172A2E' }}>
       <div
         ref={imgWrapRef}
         style={{ position:'absolute', top:'-6%', left:0, width:'100%', height:'112%', willChange:'transform' }}
@@ -36,8 +36,7 @@ export default function Hero() {
         />
       </div>
       <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,rgba(23,42,46,.55) 0%,rgba(23,42,46,.12) 32%,rgba(23,42,46,.20) 62%,rgba(23,42,46,.82) 100%)' }} />
-      <div className="hero-mobile-shade" style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,transparent 40%,rgba(23,42,46,.85) 68%,rgba(23,42,46,.96) 100%)', display:'none' }} />
-      <div className="hero-content" style={{ position:'absolute', inset:0, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 clamp(20px,7vw,120px)', maxWidth:1100 }}>
+      <div style={{ position:'absolute', inset:0, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 clamp(20px,7vw,120px)', maxWidth:1100 }}>
         <div style={{ opacity:0, animation:'shFade 1.4s cubic-bezier(.22,.61,.36,1) .3s forwards' }}>
           <span style={{ fontSize:21, letterSpacing:'.34em', textTransform:'uppercase', color:'#E4D3B4', fontWeight:500 }}>
             Eventlocation · Berlin-Schmöckwitz
@@ -61,7 +60,7 @@ export default function Hero() {
         }}>
           Ein Ort mitten auf dem Wasser, für Momente, die Abstand vom Alltag schaffen und lange in Erinnerung bleiben.
         </p>
-        <div className="hero-cta" style={{ display:'flex', flexWrap:'wrap', gap:16, marginTop:42, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .9s forwards' }}>
+        <div style={{ display:'flex', flexWrap:'wrap', gap:16, marginTop:42, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .9s forwards' }}>
           <button
             onClick={() => scrollTo('anfrage')}
             style={{ fontFamily:"'Jost',sans-serif", fontSize:13, fontWeight:500, letterSpacing:'.16em', textTransform:'uppercase', color:'#172A2E', background:'#BD9A64', border:'1px solid #BD9A64', borderRadius:2, padding:'16px 34px', cursor:'pointer', transition:'background .2s' }}
@@ -72,32 +71,10 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <div className="scroll-cue" style={{ position:'absolute', bottom:30, left:'50%', transform:'translateX(-50%)', display:'flex', flexDirection:'column', alignItems:'center', gap:10 }}>
+      <div style={{ position:'absolute', bottom:30, left:'50%', transform:'translateX(-50%)', display:'flex', flexDirection:'column', alignItems:'center', gap:10 }}>
         <span style={{ fontSize:10, letterSpacing:'.3em', textTransform:'uppercase', color:'rgba(243,239,231,.75)' }}>Scrollen</span>
         <div style={{ width:1, height:38, background:'linear-gradient(180deg,rgba(243,239,231,.7),transparent)', animation:'shCue 2.4s ease-in-out infinite' }} />
       </div>
-      <style>{`
-        .hero-section {
-          height: 100vh;
-        }
-        @media (max-width: 640px) {
-          /* iOS Safari berechnet 100vh/100dvh direkt nach dem Laden nicht
-             zuverlässig gegen die tatsächlich sichtbare Fläche (Werkzeugleiste
-             ein/ausgeblendet) — dadurch schien die nächste Sektion direkt
-             unterm Button durch. Fix: Mindesthöhe statt exakter Höhe, und
-             zwar am GRÖSSTEN möglichen Wert (100lvh) orientiert, damit die
-             Sektion nie kürzer ist als das, was gerade sichtbar ist. */
-          .hero-section { height: auto !important; min-height: 100vh !important; min-height: 100lvh !important; }
-          /* Eyebrow/H1/Text bleiben oben als Gruppe zusammen (justify-content
-             greift hier nicht mehr, weil .hero-cta unten den ganzen
-             übrigen Freiraum per margin-top:auto für sich beansprucht) —
-             nur der Button wird separat nach unten gedrückt. */
-          .hero-content { padding-top: 100px !important; padding-bottom: 40px !important; }
-          .hero-cta { margin-top: auto !important; }
-          .hero-mobile-shade { display: block !important; }
-          .scroll-cue { display: none !important; }
-        }
-      `}</style>
     </section>
   );
 }
