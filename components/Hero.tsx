@@ -36,7 +36,8 @@ export default function Hero() {
         />
       </div>
       <div style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,rgba(23,42,46,.55) 0%,rgba(23,42,46,.12) 32%,rgba(23,42,46,.20) 62%,rgba(23,42,46,.82) 100%)' }} />
-      <div style={{ position:'absolute', inset:0, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 clamp(20px,7vw,120px)', maxWidth:1100 }}>
+      <div className="hero-mobile-shade" style={{ position:'absolute', inset:0, background:'linear-gradient(180deg,transparent 40%,rgba(23,42,46,.85) 68%,rgba(23,42,46,.96) 100%)', display:'none' }} />
+      <div className="hero-content" style={{ position:'absolute', inset:0, display:'flex', flexDirection:'column', justifyContent:'center', padding:'0 clamp(20px,7vw,120px)', maxWidth:1100 }}>
         <div style={{ opacity:0, animation:'shFade 1.4s cubic-bezier(.22,.61,.36,1) .3s forwards' }}>
           <span style={{ fontSize:21, letterSpacing:'.34em', textTransform:'uppercase', color:'#E4D3B4', fontWeight:500 }}>
             Eventlocation · Berlin-Schmöckwitz
@@ -45,10 +46,11 @@ export default function Hero() {
         </div>
         <h1 style={{
           fontFamily:"'Cormorant',serif", fontWeight:500, color:'#F3EFE7',
-          fontSize:'clamp(42px,7.4vw,102px)', lineHeight:.98, letterSpacing:'.005em',
+          fontSize:'clamp(36px,6vw,84px)', lineHeight:.98, letterSpacing:'.005em',
           margin:0, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .5s forwards',
         }}>
-          <span style={{ display:'block' }}>Ihr exklusives Hausboot</span>
+          <span style={{ display:'block' }}>Ihr exklusives</span>
+          <span style={{ display:'block' }}>Hausboot</span>
           <span style={{ display:'block' }}>vor den Toren Berlins.</span>
         </h1>
         <p style={{
@@ -70,10 +72,17 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <div style={{ position:'absolute', bottom:30, left:'50%', transform:'translateX(-50%)', display:'flex', flexDirection:'column', alignItems:'center', gap:10 }}>
+      <div className="scroll-cue" style={{ position:'absolute', bottom:30, left:'50%', transform:'translateX(-50%)', display:'flex', flexDirection:'column', alignItems:'center', gap:10 }}>
         <span style={{ fontSize:10, letterSpacing:'.3em', textTransform:'uppercase', color:'rgba(243,239,231,.75)' }}>Scrollen</span>
         <div style={{ width:1, height:38, background:'linear-gradient(180deg,rgba(243,239,231,.7),transparent)', animation:'shCue 2.4s ease-in-out infinite' }} />
       </div>
+      <style>{`
+        @media (max-width: 640px) {
+          .hero-content { justify-content: flex-end !important; padding-bottom: 40px !important; }
+          .hero-mobile-shade { display: block !important; }
+          .scroll-cue { display: none !important; }
+        }
+      `}</style>
     </section>
   );
 }
