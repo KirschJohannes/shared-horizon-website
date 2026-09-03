@@ -50,8 +50,8 @@ export default function Hero() {
           margin:0, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .5s forwards',
         }}>
           <span style={{ display:'block' }}>Ihr exklusives</span>
-          <span style={{ display:'block' }}>Hausboot</span>
-          <span style={{ display:'block' }}>vor den Toren Berlins.</span>
+          <span style={{ display:'block' }}>Hausboot vor</span>
+          <span style={{ display:'block' }}>den Toren Berlins.</span>
         </h1>
         <p style={{
           fontFamily:"'Jost',sans-serif", fontWeight:300, color:'#F3EFE7',
