@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="top" style={{ position:'relative', height:'100vh', minHeight:600, width:'100%', overflow:'hidden', background:'#172A2E' }}>
+    <section id="top" style={{ position:'relative', minHeight:600, width:'100%', overflow:'hidden', background:'#172A2E' }}>
       <div
         ref={imgWrapRef}
         style={{ position:'absolute', top:'-6%', left:0, width:'100%', height:'112%', willChange:'transform' }}
@@ -77,6 +77,10 @@ export default function Hero() {
         <div style={{ width:1, height:38, background:'linear-gradient(180deg,rgba(243,239,231,.7),transparent)', animation:'shCue 2.4s ease-in-out infinite' }} />
       </div>
       <style>{`
+        #top {
+          height: 100vh;
+          height: 100dvh; /* korrekte Höhe auf iOS Safari (Adressleiste ein/ausgeblendet) */
+        }
         @media (max-width: 640px) {
           /* Eyebrow/H1/Text bleiben oben als Gruppe zusammen (justify-content
              greift hier nicht mehr, weil .hero-cta unten den ganzen
