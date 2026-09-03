@@ -22,7 +22,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section id="top" style={{ position:'relative', minHeight:600, width:'100%', overflow:'hidden', background:'#172A2E' }}>
+    <section id="top" className="hero-section" style={{ position:'relative', minHeight:600, width:'100%', overflow:'hidden', background:'#172A2E' }}>
       <div
         ref={imgWrapRef}
         style={{ position:'absolute', top:'-6%', left:0, width:'100%', height:'112%', willChange:'transform' }}
@@ -77,16 +77,22 @@ export default function Hero() {
         <div style={{ width:1, height:38, background:'linear-gradient(180deg,rgba(243,239,231,.7),transparent)', animation:'shCue 2.4s ease-in-out infinite' }} />
       </div>
       <style>{`
-        #top {
+        .hero-section {
           height: 100vh;
-          height: 100dvh; /* korrekte Höhe auf iOS Safari (Adressleiste ein/ausgeblendet) */
         }
         @media (max-width: 640px) {
+          /* iOS Safari berechnet 100vh/100dvh direkt nach dem Laden nicht
+             zuverlässig gegen die tatsächlich sichtbare Fläche (Werkzeugleiste
+             ein/ausgeblendet) — dadurch schien die nächste Sektion direkt
+             unterm Button durch. Fix: Mindesthöhe statt exakter Höhe, und
+             zwar am GRÖSSTEN möglichen Wert (100lvh) orientiert, damit die
+             Sektion nie kürzer ist als das, was gerade sichtbar ist. */
+          .hero-section { height: auto !important; min-height: 100vh !important; min-height: 100lvh !important; }
           /* Eyebrow/H1/Text bleiben oben als Gruppe zusammen (justify-content
              greift hier nicht mehr, weil .hero-cta unten den ganzen
              übrigen Freiraum per margin-top:auto für sich beansprucht) —
              nur der Button wird separat nach unten gedrückt. */
-          .hero-content { padding-top: 100px !important; padding-bottom: 28px !important; }
+          .hero-content { padding-top: 100px !important; padding-bottom: 40px !important; }
           .hero-cta { margin-top: auto !important; }
           .hero-mobile-shade { display: block !important; }
           .scroll-cue { display: none !important; }
