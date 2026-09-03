@@ -61,7 +61,7 @@ export default function Hero() {
         }}>
           Ein Ort mitten auf dem Wasser, für Momente, die Abstand vom Alltag schaffen und lange in Erinnerung bleiben.
         </p>
-        <div style={{ display:'flex', flexWrap:'wrap', gap:16, marginTop:42, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .9s forwards' }}>
+        <div className="hero-cta" style={{ display:'flex', flexWrap:'wrap', gap:16, marginTop:42, opacity:0, animation:'shFade 1.5s cubic-bezier(.22,.61,.36,1) .9s forwards' }}>
           <button
             onClick={() => scrollTo('anfrage')}
             style={{ fontFamily:"'Jost',sans-serif", fontSize:13, fontWeight:500, letterSpacing:'.16em', textTransform:'uppercase', color:'#172A2E', background:'#BD9A64', border:'1px solid #BD9A64', borderRadius:2, padding:'16px 34px', cursor:'pointer', transition:'background .2s' }}
@@ -78,7 +78,12 @@ export default function Hero() {
       </div>
       <style>{`
         @media (max-width: 640px) {
-          .hero-content { justify-content: flex-end !important; padding-bottom: 40px !important; }
+          /* Eyebrow/H1/Text bleiben oben als Gruppe zusammen (justify-content
+             greift hier nicht mehr, weil .hero-cta unten den ganzen
+             übrigen Freiraum per margin-top:auto für sich beansprucht) —
+             nur der Button wird separat nach unten gedrückt. */
+          .hero-content { padding-top: 100px !important; padding-bottom: 28px !important; }
+          .hero-cta { margin-top: auto !important; }
           .hero-mobile-shade { display: block !important; }
           .scroll-cue { display: none !important; }
         }
