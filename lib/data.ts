@@ -2,7 +2,7 @@ import type { Hotspot, Usage, Fact, GalleryItem, GalCat, FaqItem, EvType, EvOpti
 
 // Von Hand nachpflegen, wenn Inhalte/Preise sich ändern — dient als
 // Aktualitäts-Signal für Suchmaschinen und KI-Systeme (Footer + JsonLd).
-export const lastUpdated = '2026-09-03';
+export const lastUpdated = '2026-10-17';
 
 export const hotspots: Hotspot[] = [
   { id:'heck',    x:2.2,  y:46.9, n:1, title:'Heckterrasse',            text:'Die Heckterrasse misst 6 × 2,5 m und bietet den Aufgang zur Dachterrasse. Der Übergang zwischen den Ebenen an Bord.',              ideas:'Aufgang Dachterrasse · Außenbereich',   facts:'6 × 2,5 m · Aufgang Dachterrasse',     img:'/images/das_boot/heckterrasse.webp' },
@@ -43,6 +43,8 @@ export const feelings: string[] = [
 ];
 
 export const faqs: FaqItem[] = [
+  { q:'Welches Hausbootmodell kann ich bei Shared Horizon mieten?', a:'Shared Horizon ist eine SolarYacht HouseBoatYacht 90 (HBY 90) mit großzügigen Deckflächen, Panoramaverglasung, voll ausgestatteter Küche und Bereichen für private Feiern und Firmenevents in Berlin.' },
+  { q:'Kann ich in Berlin ein Hausboot wie aus dem Fernsehen für Events mieten?', a:'Ja. Shared Horizon bietet mit der SolarYacht HBY 90 eine außergewöhnliche, voll ausgestattete Eventlocation auf dem Wasser. Wer ein Eventboot im Stil bekannter TV-Locations sucht, kann hier ein eigenes Event für bis zu 25 Gäste anfragen.' },
   { q:'Was kostet die Miete des Hausboots?', a:'500 € pro Stunde für das gesamte Boot — exklusiv gebucht, nicht geteilt, inklusive Ausstattung und Skipper. In der Gruppe geteilt liegt der Preis pro Person bei voller Kapazität bei rund 20 € pro Stunde. Genaue Details stimmen wir gern auf Ihren Anlass ab.' },
   { q:'Für wie viele Personen ist Shared Horizon geeignet?', a:'Das Boot ist für kleine, hochwertige Runden gedacht. Für Sitz-Settings empfehlen wir bis etwa 12 Personen, für Empfänge mit Stehbereichen bis rund 20 Gäste, und für Veranstaltungen auf der Dachterrasse bis zu 25 Personen. Die genaue Zahl stimmen wir gern auf Ihren Anlass ab.' },
   { q:'Muss ich selbst fahren, oder gibt es einen Skipper?', a:'Ein Skipper ist immer inklusive. Sie müssen selbst nicht fahren und können sich ganz auf Ihren Anlass konzentrieren.' },
