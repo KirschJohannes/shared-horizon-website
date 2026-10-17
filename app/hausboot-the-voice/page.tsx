@@ -54,6 +54,14 @@ export default function VoiceHausbootPage() {
         <h2 style={{ fontFamily: "'Cormorant',serif", fontWeight: 500, fontSize: 'clamp(36px,5vw,66px)', lineHeight: 1.1, margin: '18px 0 25px' }}>Die SolarYacht HouseBoatYacht 90 – als Eventlocation.</h2>
         <p style={{ maxWidth: 790, lineHeight: 1.9, fontSize: 18 }}>Du hast bei <em>The Voice of Germany</em> eine außergewöhnliche Hausboot-Location entdeckt und suchst ein ähnliches Erlebnis? Shared Horizon bietet dir die <strong>SolarYacht HouseBoatYacht 90 (HBY 90)</strong> als vollständig ausgestattete Eventlocation – vom gemütlichen Innenbereich bis zur Dachterrasse.</p>
       </section>
+      <section style={{ maxWidth: 1160, margin: '0 auto', padding: '0 22px clamp(65px,8vw,110px)' }}>
+        <p style={{ textTransform: 'uppercase', letterSpacing: '.22em', color: '#80643B', fontSize: 12 }}>Einblicke an Bord</p>
+        <h2 style={{ fontFamily: "'Cormorant',serif", fontWeight: 500, fontSize: 'clamp(36px,5vw,64px)', margin: '15px 0 30px' }}>Außen beeindruckend. Innen bereit für dein Event.</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 18 }}>
+          <figure style={{ margin: 0 }}><div style={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden' }}><Image src="/images/das_boot/essbereich.webp" alt="Voll eingerichteter Essbereich mit Panoramablick auf das Wasser an Bord von Shared Horizon" fill sizes="(max-width: 680px) 100vw, 50vw" style={{ objectFit: 'cover' }} /></div><figcaption style={{ paddingTop: 12, fontSize: 14 }}>Essbereich mit Panoramablick</figcaption></figure>
+          <figure style={{ margin: 0 }}><div style={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden' }}><Image src="/images/das_boot/lounge.webp" alt="Gemütlicher Lounge-Bereich der Shared Horizon HBY 90 in Berlin" fill sizes="(max-width: 680px) 100vw, 50vw" style={{ objectFit: 'cover' }} /></div><figcaption style={{ paddingTop: 12, fontSize: 14 }}>Lounge zum Ankommen und Feiern</figcaption></figure>
+        </div>
+      </section>
       <section style={{ background: '#172A2E', color: '#F3EFE7', padding: 'clamp(65px,8vw,110px) 22px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
           <p style={{ color: '#BD9A64', textTransform: 'uppercase', letterSpacing: '.22em', fontSize: 12 }}>Mehr als nur eine Kulisse</p>
