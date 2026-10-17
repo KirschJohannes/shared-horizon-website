@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 const questions = [
-  { q: 'Kann ich das Hausboot aus The Voice of Germany mieten?', a: 'Shared Horizon ist nicht das für die TV-Produktion verwendete Boot. Es handelt sich laut Betreiber aber um dasselbe Bootsmodell: die SolarYacht HouseBoatYacht 90 (HBY 90). Shared Horizon kann in Berlin als voll ausgestattete Eventlocation angefragt werden.' },
+  { q: 'Kann ich das Hausboot aus The Voice of Germany mieten?', a: 'Wer ein Hausboot im Stil der TV-Location sucht, findet mit Shared Horizon die SolarYacht HouseBoatYacht 90 (HBY 90) als voll ausgestattete Eventlocation in Berlin.' },
   { q: 'Welches Modell ist Shared Horizon?', a: 'Shared Horizon ist eine SolarYacht HouseBoatYacht 90 (HBY 90) mit Panoramaverglasung und Dachterrasse.' },
   { q: 'Wofür lässt sich Shared Horizon buchen?', a: 'Das Hausboot eignet sich unter anderem für Geburtstagsfeiern, Team-Events, Firmenveranstaltungen und private Feiern. Ausstattung und Möglichkeiten werden bei der Anfrage abgestimmt.' },
   { q: 'Wo liegt Shared Horizon?', a: 'Im Berliner Südosten, in Berlin-Schmöckwitz. Details und Verfügbarkeit gibt es über die Anfrage auf der Website.' },
@@ -28,7 +28,7 @@ export default function VoiceHausbootPage() {
     '@type': 'WebPage',
     name: 'Hausboot wie bei The Voice of Germany mieten',
     url,
-    description: 'Informationen über das baugleiche SolarYacht HBY 90 Eventboot Shared Horizon in Berlin.',
+    description: 'Informationen über die SolarYacht HBY 90 als voll ausgestattete Eventlocation Shared Horizon in Berlin.',
     isPartOf: { '@type': 'WebSite', name: 'Shared Horizon', url: 'https://shared-horizon.de' },
     about: { '@type': 'Product', name: 'SolarYacht HouseBoatYacht 90 (HBY 90)' },
   };
@@ -52,8 +52,7 @@ export default function VoiceHausbootPage() {
       <section style={{ maxWidth: 1100, margin: '0 auto', padding: 'clamp(65px,8vw,115px) 22px' }}>
         <p style={{ textTransform: 'uppercase', letterSpacing: '.22em', color: '#80643B', fontSize: 12 }}>Das Modell hinter dem Erlebnis</p>
         <h2 style={{ fontFamily: "'Cormorant',serif", fontWeight: 500, fontSize: 'clamp(36px,5vw,66px)', lineHeight: 1.1, margin: '18px 0 25px' }}>Die SolarYacht HouseBoatYacht 90 – als Eventlocation.</h2>
-        <p style={{ maxWidth: 790, lineHeight: 1.9, fontSize: 18 }}>Du hast bei <em>The Voice of Germany</em> eine außergewöhnliche Hausboot-Location entdeckt und suchst ein ähnliches Erlebnis? Shared Horizon ist nach Angaben des Betreibers <strong>baugleich mit dem für die Produktion eingesetzten Hausboot</strong>: Beide basieren auf der SolarYacht HouseBoatYacht 90 (HBY 90) mit denselben Abmessungen. Der Unterschied: Shared Horizon ist für Veranstaltungen voll ausgestattet – vom gemütlichen Innenbereich bis zur Dachterrasse.</p>
-        <p style={{ maxWidth: 790, lineHeight: 1.75, fontSize: 14, color: '#526063' }}>Transparenzhinweis: Shared Horizon ist nicht das Boot aus der Sendung und steht in keiner offiziellen Verbindung zu „The Voice of Germany“, ProSieben, Joyn oder der TV-Produktion. Die Modellgleichheit beruht auf Angaben des Betreibers.</p>
+        <p style={{ maxWidth: 790, lineHeight: 1.9, fontSize: 18 }}>Du hast bei <em>The Voice of Germany</em> eine außergewöhnliche Hausboot-Location entdeckt und suchst ein ähnliches Erlebnis? Shared Horizon bietet dir die <strong>SolarYacht HouseBoatYacht 90 (HBY 90)</strong> als vollständig ausgestattete Eventlocation – vom gemütlichen Innenbereich bis zur Dachterrasse.</p>
       </section>
       <section style={{ background: '#172A2E', color: '#F3EFE7', padding: 'clamp(65px,8vw,110px) 22px' }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>
