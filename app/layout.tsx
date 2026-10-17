@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Eventlocation am Wasser Berlin | Shared Horizon',
-  description: 'Außergewöhnliche Eventlocation am Wasser, Berlin-Schmöckwitz. 170 m² Hausboot für Firmenevents & private Feiern. Ab 500 €/Std. — jetzt anfragen.',
+  title: 'Hausboot & Eventboot mieten Berlin | Shared Horizon',
+  description: 'SolarYacht HBY 90 als Eventboot in Berlin mieten: Shared Horizon mit über 170 m², Dachterrasse, Küche und Skipper für Firmenfeiern, Geburtstage & Events.',
   metadataBase: new URL('https://shared-horizon.de'),
   alternates: { canonical: 'https://shared-horizon.de' },
   icons: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     google: 'oZryc-Hn6ZAMHCrzdswSb09KdQ0H4K9QEZfLWmR9tWo',
   },
   openGraph: {
-    title: 'Eventlocation am Wasser Berlin | Shared Horizon',
+    title: 'Hausboot & Eventboot mieten Berlin | Shared Horizon',
     description: 'Außergewöhnliche Eventlocation am Wasser in Berlin-Schmöckwitz. 170 m² Hausboot für Firmenevents, Sommerfeste & private Feiern.',
     url: 'https://shared-horizon.de',
     siteName: 'Shared Horizon',
