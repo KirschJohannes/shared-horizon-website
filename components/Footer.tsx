@@ -67,6 +67,7 @@ export default function Footer() {
             <div style={{ fontSize:11, letterSpacing:'.28em', textTransform:'uppercase', color:'#BD9A64', marginBottom:18 }}>Entdecken</div>
             <div style={{ display:'flex', flexDirection:'column', gap:11 }}>
               <a href="#karte" style={linkStyle}>Das Boot</a>
+              <a href="/hausboot-the-voice" style={linkStyle}>Hausboot wie aus dem Fernsehen</a>
               <a href="#galerie" style={linkStyle}>Galerie</a>
               <a href="#anfrage" style={linkStyle}>Anfragen</a>
             </div>
