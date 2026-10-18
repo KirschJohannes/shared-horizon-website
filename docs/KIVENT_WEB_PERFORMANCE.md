@@ -2,6 +2,25 @@
 
 Stand: 2026-10-18. Gilt vorerst für eigene Websites (Shared Horizon, Karriere Kick, später weitere Kivent-Angebote).
 
+## Portfolio eigener Websites (Stand 2026-10-18)
+| Website/Produkt | Status | Primäre Ziele | Besonderheiten |
+| --- | --- | --- | --- |
+| shared-horizon.de | Aktiv | Event-/Buchungsanfragen | Next.js, Vercel, GitHub, Search Console |
+| karriere-kick.de | Aktiv | Unternehmen, Jugendliche, Schulen, Veranstalter | Dynamische Event-/Standort-/Datums-/Zielgruppenseiten; Technik noch prüfen |
+| kivent.de | Dachmarken-Website geplant | Unternehmensvertrauen, Markenführung, B2B-Leads | Informationsarchitektur und Brand-Suchintention von Produktmarken abgrenzen |
+| kivent.os | Software-Produkt (technische URL/Veröffentlichungsstatus vor SEO-Arbeiten verifizieren) | Software-Adoption, Vertrieb, Nutzeraktivierung | Öffentliches Marketing vs. Login-/Kundendaten und nicht indexierbare App-Routen sauber trennen |
+| be-a-guardian.de | Shop noch online, bestehendes Shopify-Angebot gekündigt; Neubau zu prüfen | Produktverkauf Kickertisch | Vor Abschaltung Inventar, Bestellungen, Domain, SEO-URLs, Redirects, Produkt-/Medien-/Review-Daten und Tracking sichern; erst Ersatz und Migration testen |
+
+## Ergänzende Mindeststandards
+- **Messkonzept:** Je Marke relevante Conversion-Ereignisse, Anfragequelle, Kampagnenparameter (UTM), Formular- und Kauftrichter sowie datenschutzkonforme Consent-/Analytics-Implementierung definieren. Anfragen nicht allein anhand von Rankings bewerten.
+- **Technisches Monitoring:** Google Search Console, Core Web Vitals/CrUX bzw. PageSpeed, Uptime, Fehlerlogs und 404-/Weiterleitungsreport regelmäßig prüfen.
+- **Qualitäts-Gates:** Test-/Preview-Deployments und Rollback-Pfad, Link-/Formular-Checks, Barrierefreiheit (insbesondere Tastatur, Labels, Kontraste), Mobile UX und Security-Updates.
+- **Daten- und Rechtehygiene:** Quellen/Fakten belegen, Lizenzen an Bild- und Videomaterial klären, Datenschutz und Cookie-Einwilligung prüfen; nur tatsächlich verfügbare Angebote bewerben.
+- **KI-Sichtbarkeit:** Gezielt reale KI-Antworten mit dokumentierten Testfragen überprüfen. Strukturierte Daten sind Hilfsmittel, keine Garantie. Log-/Crawler-Zugriff nur nach Bedarf auditieren.
+- **Portfolio-Governance:** Für jede Website eine Steckbriefdatei mit Domain, Repo, Hosting, Datenquellen, verantwortlicher Person, Zielen, Zielgruppen, Deploy-Risiken und Status; Zugänge nicht in Git speichern.
+- **Shopmigration:** Keine Domain-/Shop-Abschaltung vor Datensicherung, rechts-/steuerrelevanter Archivierung, URL-Inventur, Redirect-Mapping, Bestell-/Zahlungstest und Freigabe.
+- **Software-Sicherheit:** Bei kivent.os interne/private Login-, Admin-, Teilnehmer- und Eventdaten-Routen nicht indexieren; Zugriffsschutz muss technisch durchgesetzt werden, nicht nur durch robots.txt.
+
 ## Ziele
 1. Qualifizierte Anfragen und Buchungen erhöhen (nicht nur Rankings).
 2. Organische Sichtbarkeit in Google und KI-gestützten Sucherlebnissen (GEO) verbessern.
