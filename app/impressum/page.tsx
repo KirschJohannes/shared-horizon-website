@@ -37,7 +37,7 @@ export default function Impressum() {
               Deutschland
             </p>
             <p style={{ fontFamily:"'Jost',sans-serif", fontWeight:300, fontSize:14, lineHeight:1.7, color:'#9C9488', margin:'12px 0 0' }}>
-              Marke „Shared Horizon" — ein Angebot der Kivent GmbH.
+              Marke „Shared Horizon&ldquo; — ein Angebot der Kivent GmbH.
             </p>
           </section>
 
@@ -90,7 +90,7 @@ export default function Impressum() {
           </section>
 
           <p style={{ fontFamily:"'Jost',sans-serif", fontWeight:300, fontSize:13.5, lineHeight:1.7, color:'#9C9488', margin:'clamp(20px,3vw,32px) 0 0', padding:'18px 22px', background:'#F3EFE7', border:'1px solid #E6E0D5', borderRadius:3 }}>
-            „Shared Horizon" ist eine Marke der Kivent GmbH. Für Anfragen rund um das Hausboot erreichen Sie uns am schnellsten unter anfrage@shared-horizon.de.
+            „Shared Horizon&ldquo; ist eine Marke der Kivent GmbH. Für Anfragen rund um das Hausboot erreichen Sie uns am schnellsten unter anfrage@shared-horizon.de.
           </p>
         </div>
       </main>
