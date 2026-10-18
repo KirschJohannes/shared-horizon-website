@@ -107,7 +107,7 @@ export default function Datenschutz() {
           <section style={sec}>
             <h2 style={h2s}>10. SSL-/TLS-Verschlüsselung</h2>
             <p style={ps}>
-              Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am „https://" in der Adresszeile Ihres Browsers.
+              Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am „https://&ldquo; in der Adresszeile Ihres Browsers.
             </p>
           </section>
 
