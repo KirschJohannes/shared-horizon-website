@@ -1,11 +1,11 @@
 /** Begrenztes JSON-Parsing ohne vollständiges Einlesen übergroßer Request-Bodys. */
 export class RequestBodyError extends Error {
-  constructor(
-    public readonly status: number,
-    message: string,
-  ) {
+  readonly status: number;
+
+  constructor(status: number, message: string) {
     super(message);
     this.name = 'RequestBodyError';
+    this.status = status;
   }
 }
 
