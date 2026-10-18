@@ -67,6 +67,7 @@ export default function Anfrage() {
       personen: fd.get('personen'),
       nachricht: fd.get('nachricht'),
       dsgvo: !!fd.get('dsgvo'),
+      website: fd.get('website'),
     };
     try {
       const res = await fetch('/api/anfrage', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(body) });
@@ -176,6 +177,10 @@ export default function Anfrage() {
                   <a href="/datenschutz" style={{ color:'#172A2E', borderBottom:'1px solid #BD9A64' }}>Datenschutzerklärung</a>.
                 </span>
               </label>
+              <div aria-hidden="true" style={{ position:'absolute', left:'-9999px', width:1, height:1, overflow:'hidden' }}>
+                <label htmlFor="sh-website">Website</label>
+                <input id="sh-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
+              </div>
               {error && <p style={{ fontFamily:"'Jost',sans-serif", fontSize:14, color:'#c0392b', margin:0 }}>{error}</p>}
               <button
                 type="submit"
