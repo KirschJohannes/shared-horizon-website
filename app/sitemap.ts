@@ -1,13 +1,20 @@
 import { MetadataRoute } from 'next';
 
+// Diese Daten nur aktualisieren, wenn sich der sichtbare Inhalt geändert hat.
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://shared-horizon.de';
-  const now = new Date();
-  const legalDate = new Date('2026-06-21');
   return [
-    { url: base,                    lastModified: now,       changeFrequency: 'weekly',  priority: 1.0 },
-    { url: `${base}/hausboot-the-voice`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${base}/impressum`,     lastModified: legalDate, changeFrequency: 'yearly',  priority: 0.1 },
-    { url: `${base}/datenschutz`,   lastModified: legalDate, changeFrequency: 'yearly',  priority: 0.1 },
+    {
+      url: base,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
+      url: `${base}/hausboot-the-voice`,
+      lastModified: new Date('2026-10-17'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
   ];
 }
